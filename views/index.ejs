@@ -1,0 +1,19 @@
+<%- include('./partials/head', { title }) %>
+
+<a href="/new">Add message</a>
+
+<ul>
+    <% messages.forEach(msg => { %>
+        <li>
+            <p>Name: <%= msg.user %></p>
+            <p>Message: <%= msg.text %></p>
+            <p>Date Added: <%= msg.added %></p>
+        </li>
+        <a href='<%= `/message/${msg.id}` %>'>Open</a>
+        <hr>
+    <% }) %>
+</ul>
+
+
+<%- include('./partials/foot') %>
+    

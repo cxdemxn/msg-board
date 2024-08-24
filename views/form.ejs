@@ -1,0 +1,17 @@
+<%- include('./partials/head', { title }) %>
+
+<form action="/new" method="post">
+    <label for="usr">
+        <span>Enter Username:</span>
+        <input id="usr" type="text" name="usrName">
+    </label>
+    <label for="usrMsg">
+        <span>Enter Message:</span>
+        <input id="usrMsg" type="text" name="usrMsg">
+    </label>
+
+    <button type="submit">Save message</button>
+</form>
+
+<%- include('./partials/foot') %>
+    
